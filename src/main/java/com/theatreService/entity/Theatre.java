@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.sql.*;
 
 
 
@@ -22,6 +23,7 @@ public class Theatre {
     @Column(name = "address")
     private String address;
     
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city_id")
  
@@ -40,6 +42,7 @@ public class Theatre {
         this.address = address;
         this.screens = new ArrayList<>();
     }
+            
 
     public String getTheatreId() {
         return theatreId;

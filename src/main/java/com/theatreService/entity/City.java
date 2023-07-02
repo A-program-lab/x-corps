@@ -57,11 +57,11 @@ public class City {
 
     public void addTheatre(Theatre theatre) {
         theatres.add(theatre);
-    //    theatre.setCity(this);
+        theatre.setCity(this);
     }
 
     public void removeTheatre(Theatre theatre) {
         theatres.remove(theatre);
-    //    theatre.setCity(null);
+       theatre.setCity(null);
     }
 }

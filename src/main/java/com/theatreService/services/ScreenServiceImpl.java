@@ -24,16 +24,41 @@ public class ScreenServiceImpl implements ScreenService {
         this.theatreRepository = theatreRepository;
     }
 
+//    @Override
+//    @Transactional
+//    public void addScreen(String theatreId, Screen screen) {
+//        Theatre theatre = theatreRepository.findById(theatreId).orElse(null);
+//        if (theatre != null) {
+//            screen.setTheatre(theatre);
+//            theatre.addScreen(screen);
+//            screenRepository.save(screen);
+//        }
+//    }
+    
     @Override
     @Transactional
     public void addScreen(String theatreId, Screen screen) {
         Theatre theatre = theatreRepository.findById(theatreId).orElse(null);
         if (theatre != null) {
-            screen.setTheatre(theatre);
-            theatre.addScreen(screen);
-            screenRepository.save(screen);
+            Screen existingScreen = screenRepository.findById(screen.getScreenId()).orElse(null);
+            if (existingScreen != null) {
+                // Update the existing screen with new properties
+                existingScreen.setScreenName(screen.getScreenName());
+                // Set the theatre association
+                existingScreen.setTheatre(theatre);
+                // Save the updated screen
+                screenRepository.save(existingScreen);
+       
+            } else {
+                // Set the theatre association
+                screen.setTheatre(theatre);
+                // Save the new screen
+                screenRepository.save(screen);
+         
+            }
         }
     }
+
 
     @Override
     @Transactional(readOnly = true)

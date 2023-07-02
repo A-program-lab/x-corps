@@ -1,5 +1,7 @@
 package com.theatreService.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -13,7 +15,8 @@ public class Screen {
     @Column(name = "screen_name")
     private String screenName;
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "theatre_id")
     private Theatre theatre;
 

@@ -38,6 +38,7 @@ public class TheatreServiceImpl implements TheatreService {
     public void addTheatreInCity(String cityId, Theatre theatre) {
         City city = cityRepository.findById(cityId).orElse(null);
         if (city != null) {
+        	theatre.setCity(city);
             theatreRepository.save(theatre);
             city.addTheatre(theatre);
             cityRepository.save(city);
