@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #server:
 #  port: 8084
+=======
+server:
+  port: 8083
+>>>>>>> 22cc800d713fe9aa35a4aaffc923bbf51ccb83af
   
 spring:
   datasource:

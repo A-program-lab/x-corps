@@ -33,5 +33,20 @@
 		<item value="org.sonatype.m2e.egit.feature:0.17.0.202209271423"/>
 	</list>
 	<section name="ExternalProjectImportWizard">
+<<<<<<< HEAD
+=======
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\ANUSVERM\OneDrive - Capgemini\Documents\Challenge 2.0"/>
+			<item value="C:\Users\ANUSVERM\OneDrive - Capgemini\Documents\Challenge 2.0\theatre"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+>>>>>>> 22cc800d713fe9aa35a4aaffc923bbf51ccb83af
 	</section>
 </section>

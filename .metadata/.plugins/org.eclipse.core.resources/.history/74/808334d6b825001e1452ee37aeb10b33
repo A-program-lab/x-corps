@@ -1,0 +1,52 @@
+package com.theatreService.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.theatreService.entity.City;
+import com.theatreService.entity.Theatre;
+import com.theatreService.repository.CityRepository;
+
+@Service
+public class CityServiceImpl implements CityService {
+    
+    private final CityRepository cityRepository;
+
+    public CityServiceImpl(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
+    }
+//    public void createCity() {
+//        City city = new City("C3", "New York");
+//        cityRepository.save(city);
+//    }
+    @Override
+  //  @Transactional
+    public void addCity(City city) {
+        cityRepository.save(city);
+    }
+
+    @Override
+  //  @Transactional(readOnly = true)
+    public List<City> getAllCity() {
+        return cityRepository.findAll();
+    }
+
+    @Override
+    @Transactional
+    public void removeCity(String cityId) {
+        cityRepository.deleteById(cityId);
+    }
+	@Override
+	public City findOne(String cityId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Theatre> getTheatreByCity(City theCity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

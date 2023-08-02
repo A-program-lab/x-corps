@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+<<<<<<< HEAD
+=======
+			<item value="C:\Users\ANUSVERM\OneDrive - Capgemini\Documents\Challenge 2.0\theatre"/>
+>>>>>>> 22cc800d713fe9aa35a4aaffc923bbf51ccb83af
 			<item value="F:\Challenge\theatreService"/>
 		</list>
 		<list key="projectNameTemplate">
