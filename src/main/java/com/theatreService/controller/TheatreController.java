@@ -39,6 +39,11 @@ public class TheatreController {
         this.cityService = cityService;
         this.screenService = screenService;
     }
+    
+    @GetMapping("/")
+    String return1(){
+        return "Hello World";
+    }
 
     // City endpoints
     @PostMapping("/cities")
